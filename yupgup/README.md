@@ -1,0 +1,224 @@
+Credits from http://yupgup.com/
+
+The demo http://fiddle.jshell.net/haohcraft/H4wFf/
+
+The SVG:
+
+		<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="logo" x="0px" y="0px" width="463.593px" height="436.162px" viewBox="0 0 463.593 436.162" enable-background="new 0 0 463.593 436.162" xml:space="preserve" data-ember-extension="1">
+		<g>
+			<circle fill="#E9693F" cx="319.06" cy="245.878" r="24.442"/>
+			<path fill="#E9693F" d="M363.391,175.286c0.337-2.354,0.447-4.776,0.307-7.242l-2.222-38.874   c-1.14-19.995-18.272-35.279-38.272-34.139l-9.648,0.551c0.334-9.692,1.397-19.331,3.727-28.709   c1.63-6.557,5.811-15.703,12.525-18.799c3.342-1.541,8.115,0.845,11.815-1.151c3.75-2.023,4.974-6.544,6.005-10.369   c2.255-8.365,4.091-18.421,0.915-26.81c-1.541-4.071-5.192-7.7-9.391-9.117c-0.041-0.014-43.291-14.444-40.093,95.783   l-16.214,0.926l-5.16-51.547c-0.609-6.087-6.039-10.533-12.128-9.92c-6.09,0.609-10.53,6.041-9.924,12.13l5.071,50.66   c-19.015,2.122-33.257,18.776-32.152,38.103l1.238,21.678c-86.87,10.07-154.859,59.024-165.895,120.334l-30.326,3.731   c-0.509-0.505-1.056-0.97-1.641-1.385c3.594-14.16,6.222-36.383-0.443-48.195c-3.64-6.451-9.594-9.362-17.224-8.424   c-7.827,0.963-11.26,5.141-12.762,8.475c-5.681,12.612,6.052,35.859,14.038,49.303c-0.466,0.442-0.912,0.91-1.315,1.427   c-2.134,2.731-3.074,6.131-2.65,9.559c0.45,3.692,2.433,6.864,5.26,8.917c-3.509,14.185-5.96,35.935,0.605,47.565   c3.193,5.658,8.17,8.594,14.496,8.593c0.883,0,1.793-0.057,2.727-0.172c7.824-0.964,11.257-5.14,12.759-8.474   c5.62-12.478-5.805-35.374-13.782-48.878c0.358-0.361,0.703-0.739,1.021-1.146c0.322-0.412,0.607-0.844,0.875-1.285l26.799-3.297   c-0.005,0.42-0.02,0.839-0.02,1.261c0,77.216,89.828,139.814,200.641,139.814s200.641-62.598,200.641-139.814   C463.593,244.628,423.295,199.473,363.391,175.286z M196.091,392.464c-13.5,0-24.444-10.942-24.444-24.443   c0-13.5,10.944-24.44,24.444-24.44c13.499,0,24.44,10.94,24.44,24.44C220.531,381.522,209.59,392.464,196.091,392.464z    M262.951,392.464c-13.501,0-24.441-10.942-24.441-24.443c0-13.5,10.94-24.44,24.441-24.44c13.499,0,24.442,10.94,24.442,24.44   C287.393,381.522,276.45,392.464,262.951,392.464z M329.816,392.464c-13.498,0-24.444-10.942-24.444-24.443   c0-13.5,10.946-24.44,24.444-24.44c13.5,0,24.442,10.94,24.442,24.44C354.259,381.522,343.316,392.464,329.816,392.464z    M320.998,321.261c-34.244,5.58-70.398-3.547-101.938-16.63c-15.385,9.336-47.693,27.965-65.477,13.586   c-21.644-17.5-5.723-49.456,16.621-56.633c-3.707,1.187-10.439-4.791-13.204-6.944c-12.478-9.72-19.327-30.851-8.321-44.421   c12.825-15.81,34.644-9.285,50.267-2.341c3.27,1.455,6.468,3.054,9.617,4.735c1.457,0.779,9.292,6.425,10.497,5.925   c31.54-13.09,67.694-22.222,101.938-16.64c22.985,3.745,48.586,16.421,57.707,39.034   C395.226,281.895,358.117,315.218,320.998,321.261z"/>
+		</g>
+		</svg>
+
+The HTML code
+
+		<header>
+					<img class="logo" src="http://yupgup.com/yupgupfish.svg" alt="Yup Gup Logo">
+					<div class="bubbles"></div>
+					<div class="bubbles bubbles-2"></div>
+					<div class="bubbles bubbles-3"></div>
+					<div class="bubbles bubbles-4"></div>
+					<div class="bubbles bubbles-5"></div>
+				</header>
+
+
+The CSS code
+
+		header {
+			width: 100%;
+			height: 250px;
+		}
+
+		.logo {
+			height: 200px;
+			width: 200px;
+			position: absolute;
+			left: 50%;
+			margin-left: -112px;
+		}
+
+		.bubbles {
+		  	display: none;
+		  	height: 2px;
+		  	width: 2px;
+		  	border: 6px solid white;
+		  	border-radius: 50%;
+		  	position: absolute;
+		  	top: 140px;
+		  	left: 45%;
+		  	-webkit-animation: motor-1 8s infinite;
+		  	z-index: -1;
+		  	opacity: .30;
+		}
+
+		.bubbles-2 {
+			display: none;
+			-webkit-animation: motor-2 10s infinite;
+			-webkit-animation-delay: 1s;
+		}
+
+		.bubbles-3 {
+			display: none;
+		 	-webkit-animation: motor-3 9s infinite;
+		 	-webkit-animation-delay: 3s;
+		}
+
+		.bubbles-4 {
+			display: none;
+		 	-webkit-animation: motor-4 8s infinite;
+		 	-webkit-animation-delay: 7s;
+		}
+
+		.bubbles-5 {
+			display: none;
+		 	-webkit-animation: motor-5 9s infinite;
+		 	-webkit-animation-delay: 4s;
+		}
+
+		.intro {
+			font-family: Futura, sans-serif;
+			color: #3a3a3a;
+			font-size: 40px;
+			width: 75%;
+			margin: auto;
+			text-align: center;
+			margin-top: 40px;
+		}
+
+		footer {
+			height: 200px;
+			width: 100%;
+			margin-top: 100px;
+		}
+
+		.contact {
+			width: 200px;
+			height: 200px;
+			position: absolute;
+			left: 50%;
+			margin-left: -100px;
+		}
+
+		@-webkit-keyframes motor-1 {
+		  0% {
+		    left: 40%;
+		  }
+		  50% {
+		    top: 170px;
+		    border: 12px solid #3a3a3a;
+		    background-color: #3a3a3a;
+		  }
+		  100% {
+		    left: -20%;
+		    top: 180px;
+		  }
+		}
+
+		@-webkit-keyframes motor-2 {
+		  0% {
+		    left: 40%;
+		  }
+		  50% {
+		    top: 160px;
+		    border: 10px solid #3a3a3a;
+		    background-color: #3a3a3a;
+		  }
+		  100% {
+		    left: -20%;
+		    top: 130px;
+		  }
+		}
+
+		@-webkit-keyframes motor-3 {
+		  0% {
+		    left: 40%;
+		  }
+		  50% {
+		    top: 140px;
+		    border: 10px solid #3a3a3a;
+		    background-color: #3a3a3a;
+		    opacity: .20;
+		  }
+		  100% {
+		    left: -20%;
+		    top: 225px;
+		  }
+		}
+
+		@-webkit-keyframes motor-4 {
+		  0% {
+		    left: 40%;
+		  }
+		  50% {
+		    top: 100px;
+		    border: 8px solid #3a3a3a;
+		    background-color: #3a3a3a;
+		    opacity: .50;
+		  }
+		  100% {
+		    left: -20%;
+		    top: 260px;
+		  }
+		}
+
+		@-webkit-keyframes motor-5 {
+		  0% {
+		    left: 40%;
+		  }
+		  50% {
+		    top: 180px;
+		    border: 13px solid #3a3a3a;
+		    background-color: #3a3a3a;
+		  }
+		  100% {
+		    left: -20%;
+		    top: 200px;
+		  }
+		}
+
+		@-webkit-keyframes sway {
+			0%{
+		    -webkit-transform: rotate(5deg);
+		    top: 0;
+		  	}
+		  	50%{
+		    -webkit-transform: rotate(-2deg);
+		    top: 15px;
+		  	}
+		  	100%{
+		    -webkit-transform: rotate(5deg);
+		    top: 0;
+		  }
+		}
+
+		@-webkit-keyframes rock {
+			0% {
+				-webkit-transform: rotate(0deg);
+			}
+			25% {
+				-webkit-transform: rotate(13deg);
+			}
+			50% {
+				-webkit-transform: rotate(0deg);
+			}
+			75% {
+				-webkit-transform: rotate(-13deg);
+			}
+			100% {
+				-webkit-transform: rotate(0deg);
+			}
+		}
+
+		.contact:hover {
+			-webkit-animation: rock 2s infinite;
+		}
+
+		@media (min-width: 100px) {
+			.logo {
+				-webkit-animation: rock 5s infinite;
+			}
+			.bubbles {
+				display: block;
+			}
+		}
